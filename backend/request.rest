@@ -1,0 +1,43 @@
+POST http://localhost:3000/api/v1/user/Sign-in
+Content-Type: application/json
+
+{
+    "username": "saurav2@gmail.com",
+    "password": "test(1234)"
+    }
+###
+GET http://localhost:3000/api/v1/user/?filter=kart
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzQ0MTkyNTNhOTZiYmMxZjQ4ZjA3MWYiLCJpYXQiOjE3MzI2ODY1OTB9.L2dQOjaEQHedpAwG_EiBfeOCW0i8jTUGHzw7pQOjsys
+###
+POST http://localhost:3000/api/v1/user/Sign-up
+Content-Type: application/json
+
+{
+    "username": "saurav2@gmail.com",
+    "password": "test(1234)",
+    "firstName": "saurav",
+    "lastName" :"ji"
+}
+###
+PUT http://localhost:3000/api/v1/user/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzg0YjhlNDAxZGY5ZDk3ZTc0YWY3MzEiLCJpYXQiOjE3MzY3NTEzMzJ9.aOOTYdPw5d4tDVD3MOPoHj4q7s-PttEPvWonHR0l5U8
+Content-Type: application/json
+
+{
+"firstname": "saurabh"
+}
+
+###
+GET http://localhost:3000/api/v1/user/bulk?filter=kartik
+###
+GET http://localhost:3000/api/v1/account/balance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzg0YjhlNDAxZGY5ZDk3ZTc0YWY3MzEiLCJpYXQiOjE3MzY3NTEzMzJ9.aOOTYdPw5d4tDVD3MOPoHj4q7s-PttEPvWonHR0l5U8
+###
+POST http://localhost:3000/api/v1/account/transfer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzg0YjhlNDAxZGY5ZDk3ZTc0YWY3MzEiLCJpYXQiOjE3MzY3NTEzMzJ9.aOOTYdPw5d4tDVD3MOPoHj4q7s-PttEPvWonHR0l5U8
+Content-Type: application/json
+
+{
+    "to" : "6755733143306b506860f0c0",
+    "amount" : 1000
+}
